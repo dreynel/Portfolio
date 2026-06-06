@@ -1803,7 +1803,8 @@ section,
 
 .portfolio-card:hover {
   transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 12px 30px -10px color-mix(in srgb, var(--accent-color), transparent 85%);
+  border-color: color-mix(in srgb, var(--accent-color), transparent 60%);
 }
 
 .portfolio-card .portfolio-thumb {
@@ -2176,4 +2177,25 @@ section,
   .experience-card::before {
     left: -21px;
   }
+}
+
+/* Custom Premium Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--accent-color), transparent 70%);
+  border-radius: 5px;
+  border: 2px solid var(--background-color);
+  transition: background 0.3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
 }
